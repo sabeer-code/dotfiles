@@ -12,6 +12,10 @@ alias urlencode='python3 -c "import sys, urllib.parse as ul; print(ul.quote(sys.
 # Other Command Line Aliases
 alias ll="ls -alF"
 
+if [[ -e "$(which nvim)" ]]; then
+    alias vim="nvim"
+fi
+
 
 # Dotfiles config
 alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
