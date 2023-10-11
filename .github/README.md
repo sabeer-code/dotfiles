@@ -3,29 +3,35 @@ A repository for some of my configuration dotfiles.
 
 ### How to install onto a new system
 ```bash
-echo alias config=\'/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=\$HOME\' > ~/.bashrc
-source ~/.bashrc
+alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 echo ".cfg" >> .gitignore
 git clone --bare https://github.com/SabeerBakir/dotfiles.git $HOME/.cfg
 config checkout
 config config --local status.showUntrackedFiles no
 ```
 
-### Additional files to source in ~/.bashrc
+### Additional files to source folders to add into PATH in ~/.bashrc
 ```
 cat <<EOF >> ~/.bashrc
 
 # Alias definitions.
-if [ -f ~/.bash_aliases ]; then
+if [[ -f ~/.bash_aliases ]]; then
     . ~/.bash_aliases
 fi
 
 # Prompt Definition
-if [ -f ~/.bash_prompt ]; then
+if [[ -f ~/.bash_prompt ]]; then
     . ~/.bash_prompt
 fi
 
+# Create ~/bin folder if it does not exist and add to PATH
+if [[ ! -d ~/bin ]]; then
+    mkdir -p $HOME/bin
+fi
+export PATH="$HOME/bin:$PATH"
+
 EOF
+source ~/.bashrc
 ```
 
 ### NeoVim setup
