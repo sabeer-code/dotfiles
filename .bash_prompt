@@ -1,0 +1,8 @@
+# My Bash prompt
+#
+#
+# Example:
+# (2023-10-11T15:44:12 +0100) <0> [~]
+# wacko@hostname $
+
+PS1='\n\[\e[32m\](\D{%FT%T %z}) \[\e[0m\]<$?>\[\e[96m\]$(git branch 2>/dev/null | grep '"'"'*'"'"' | colrm 1 2 | sed '"'"'s/^/ (/'"'"' | sed '"'"'s/$/)/'"'"')\[\e[0m\] [\w]\n\u@\h \$ '
