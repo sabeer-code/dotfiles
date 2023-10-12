@@ -14,6 +14,12 @@ config config --local status.showUntrackedFiles no
 ```
 cat <<EOF >> ~/.bashrc
 
+# Create ~/bin folder if it does not exist and add to PATH
+if [[ ! -d ~/bin ]]; then
+    mkdir -p $HOME/bin
+fi
+export PATH="$HOME/bin:$PATH"
+
 # Alias definitions.
 if [[ -f ~/.bash_aliases ]]; then
     . ~/.bash_aliases
@@ -23,12 +29,6 @@ fi
 if [[ -f ~/.bash_prompt ]]; then
     . ~/.bash_prompt
 fi
-
-# Create ~/bin folder if it does not exist and add to PATH
-if [[ ! -d ~/bin ]]; then
-    mkdir -p $HOME/bin
-fi
-export PATH="$HOME/bin:$PATH"
 
 EOF
 source ~/.bashrc
