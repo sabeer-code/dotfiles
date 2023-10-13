@@ -12,22 +12,22 @@ config config --local status.showUntrackedFiles no
 
 ### Additional files to source folders to add into PATH in ~/.bashrc
 ```
-cat <<EOF >> ~/.bashrc
+cat <<'EOF' >> ~/.bashrc
 
 # Create ~/bin folder if it does not exist and add to PATH
-if [[ ! -d ~/bin ]]; then
+if [[ ! -d $HOME/bin ]]; then
     mkdir -p $HOME/bin
 fi
 export PATH="$HOME/bin:$PATH"
 
 # Alias definitions.
-if [[ -f ~/.bash_aliases ]]; then
-    . ~/.bash_aliases
+if [[ -f $HOME/.bash_aliases ]]; then
+    . $HOME/.bash_aliases
 fi
 
 # Prompt Definition
-if [[ -f ~/.bash_prompt ]]; then
-    . ~/.bash_prompt
+if [[ -f $HOME/.bash_prompt ]]; then
+    . $HOME/.bash_prompt
 fi
 
 EOF
@@ -40,9 +40,19 @@ cd ~/bin
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 chmod u+x nvim.appimage
 ln -s nvim.appimage ./nvim
+cd ~
+source ~/.bashrc
+nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 ```
 
+### Some dependencies for the plugins on NeoVim:
+- C compiler: `cc`, `gcc`, `clang`, `cl`, `zig`
+- `npm`
+- `go`
+- `unzip`
 
 
 References:
-- https://www.atlassian.com/git/tutorials/dotfiles
+- [Dotfiles: Best Way to Store in a Bare Git Repository](https://www.atlassian.com/git/tutorials/dotfiles)
+- [0 to LSP : Neovim RC From Scratch by ThePrimeagen](https://youtu.be/w7i4amO_zaE?feature=shared)
+
