@@ -42,7 +42,7 @@ chmod u+x nvim.appimage
 ln -s nvim.appimage ./nvim
 cd ~
 source ~/.bashrc
-nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+nvim --headless "+Lazy! sync" +qa
 ```
 
 ### Some dependencies for the plugins on NeoVim:
@@ -55,4 +55,5 @@ nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 References:
 - [Dotfiles: Best Way to Store in a Bare Git Repository](https://www.atlassian.com/git/tutorials/dotfiles)
 - [0 to LSP : Neovim RC From Scratch by ThePrimeagen](https://youtu.be/w7i4amO_zaE?feature=shared)
+- [Github: lazy.nvim](https://github.com/folke/lazy.nvim)
 
