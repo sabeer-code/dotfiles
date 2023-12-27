@@ -45,18 +45,14 @@ source ~/.bashrc
 ```
 
 ### NvChad setup
-Need to move the custom config out before cloning the repo
+Delete current config, clone the NvChad setup, and restore custom config
 ```bash
-mv ~/.config/nvim/lua/custom/ /tmp/custom
-rm -rf ~/.config/nvim
-git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
-rm -rf ~/.config/nvim/lua/custom/
-mv /tmp/custom ~/.config/nvim/lua/custom/
+rm -rf ~/.config/nvim && git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && config restore ~/.config/nvim/lua/custom
 ```
 
 ### Tmux setup
-Install Tmux as per [TmuxWiki](https://github.com/tmux/tmux/wiki)
-NOTE: This is needed as some Tmux configuration needs newer versions of Tmux
+Install Tmux as per [TmuxWiki](https://github.com/tmux/tmux/wiki)  
+**NOTE:** This is needed as some Tmux configuration needs newer versions of Tmux
 
 
 References:
