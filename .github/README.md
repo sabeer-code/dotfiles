@@ -47,6 +47,10 @@ source ~/.bashrc
 ### NvChad setup
 Install NvChad as per [QuickStart](https://nvchad.com/docs/quickstart/install)
 
+### Tmux setup
+Install Tmux as per [TmuxWiki](https://github.com/tmux/tmux/wiki)
+NOTE: This is needed as some Tmux configuration needs newer versions of Tmux
+
 
 References:
 - [Dotfiles: Best Way to Store in a Bare Git Repository](https://www.atlassian.com/git/tutorials/dotfiles)
