@@ -11,7 +11,7 @@ config config --local status.showUntrackedFiles no
 ```
 
 ### Additional files to source folders to add into PATH in ~/.bashrc
-```
+```bash
 cat <<'EOF' >> ~/.bashrc
 
 # Create ~/bin folder if it does not exist and add to PATH
@@ -42,18 +42,23 @@ chmod u+x nvim.appimage
 ln -s nvim.appimage ./nvim
 cd ~
 source ~/.bashrc
-nvim --headless "+Lazy! sync" +qa
 ```
 
-### Some dependencies for the plugins on NeoVim:
-- C compiler: `cc`, `gcc`, `clang`, `cl`, `zig`
-- `npm`
-- `go`
-- `unzip`
+### NvChad setup
+Delete current config, clone the NvChad setup, and restore custom config
+```bash
+rm -rf ~/.config/nvim && git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && config restore ~/.config/nvim/lua/custom
+```
+
+### Tmux setup
+Install Tmux as per [TmuxWiki](https://github.com/tmux/tmux/wiki)  
+**NOTE:** This is needed as some Tmux configuration needs newer versions of Tmux
 
 
 References:
 - [Dotfiles: Best Way to Store in a Bare Git Repository](https://www.atlassian.com/git/tutorials/dotfiles)
 - [0 to LSP : Neovim RC From Scratch by ThePrimeagen](https://youtu.be/w7i4amO_zaE?feature=shared)
 - [Github: lazy.nvim](https://github.com/folke/lazy.nvim)
+- [Turn VIM into a full featured IDE with only one command](https://youtu.be/Mtgo-nP_r8Y?si=cTe321ewX2MuTUCq)
+- [Tmux has forever changed the way I write code.](https://youtu.be/DzNmUNvnB04?si=yXmXHQic0amMzW9f)
 
