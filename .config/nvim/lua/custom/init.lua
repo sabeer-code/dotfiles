@@ -1,6 +1,3 @@
--- THICC cursor while in INSERT mode
-vim.opt.guicursor = ""
-
 -- Line Numbers
 vim.opt.nu = true
 vim.opt.relativenumber = true
@@ -27,3 +24,6 @@ vim.opt.incsearch = true
 
 -- Scroll settings
 vim.opt.scrolloff = 8
+
+-- Ruler settings
+vim.opt.colorcolumn = "80"
