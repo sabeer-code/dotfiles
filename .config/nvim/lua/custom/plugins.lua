@@ -8,19 +8,9 @@ local plugins = {
     },
     {
         "williamboman/mason.nvim",
-        opts = {
-            ensure_installed = {
-                "clangd",
-                "eslint-lsp",
-                "gopls",
-                "lua-language-server",
-                "pyright",
-                "rust-analyzer",
-                "tailwindcss-language-server",
-                "typescript-language-server",
-                "yamlfmt",
-            },
-        }
+    },
+    {
+        "williamboman/mason-lspconfig.nvim",
     },
     {
         "christoomey/vim-tmux-navigator",
