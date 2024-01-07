@@ -51,8 +51,9 @@ rm -rf ~/.config/nvim && git clone https://github.com/NvChad/NvChad ~/.config/nv
 ```
 
 ### Tmux setup
-Install Tmux as per [TmuxWiki](https://github.com/tmux/tmux/wiki)  
+1. Install Tmux as per [TmuxWiki](https://github.com/tmux/tmux/wiki)  
 **NOTE:** This is needed as some Tmux configuration needs newer versions of Tmux
+2. Clone Tmux Package Manager into config: https://github.com/tmux-plugins/tpm#installation
 
 
 References:
