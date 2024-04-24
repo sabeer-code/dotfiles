@@ -62,4 +62,5 @@ References:
 - [Github: lazy.nvim](https://github.com/folke/lazy.nvim)
 - [Turn VIM into a full featured IDE with only one command](https://youtu.be/Mtgo-nP_r8Y?si=cTe321ewX2MuTUCq)
 - [Tmux has forever changed the way I write code.](https://youtu.be/DzNmUNvnB04?si=yXmXHQic0amMzW9f)
-
+- [The Only Video You Need to Get Started with Neovim](https://youtu.be/m8C0Cq9Uv9o)
+- [Github: kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim)
