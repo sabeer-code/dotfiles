@@ -36,24 +36,15 @@ source ~/.bashrc
 
 ### NeoVim setup
 ```bash
-cd ~/bin
-curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
-chmod u+x nvim.appimage
-ln -s nvim.appimage ./nvim
-cd ~
-source ~/.bashrc
-```
-
-### NvChad setup
-Delete current config, clone the NvChad setup, and restore custom config
-```bash
-rm -rf ~/.config/nvim && git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && config restore ~/.config/nvim/lua/custom
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
+sudo rm -rf /opt/nvim
+sudo tar -C /opt -xzf nvim-linux64.tar.gz
+export PATH=$PATH:/opt/nvim-linux64/bin
 ```
 
 ### Tmux setup
 1. Install Tmux as per [TmuxWiki](https://github.com/tmux/tmux/wiki)  
 **NOTE:** This is needed as some Tmux configuration needs newer versions of Tmux
-2. Clone Tmux Package Manager into config: https://github.com/tmux-plugins/tpm#installation
 
 
 References:
