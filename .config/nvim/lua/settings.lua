@@ -8,7 +8,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 
 -- Add ruler
-vim.opt.colorcolumn = "80,120"
+vim.opt.colorcolumn = "120"
 
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = "a"
