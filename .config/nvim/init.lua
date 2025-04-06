@@ -5,7 +5,7 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 -- Set to true if you have a Nerd Font installed
-vim.g.have_nerd_font = false
+vim.g.have_nerd_font = true
 
 -- [[ Setting options ]]
 require("settings")
@@ -28,18 +28,10 @@ vim.opt.rtp:prepend(lazypath)
 -- [[ Configure and install plugins ]]
 --
 
-local plugindir = vim.fn.stdpath("config") .. "/lua/plugins/"
-local plugintable = (function()
-	local t = {}
-	local files = vim.fn.glob(plugindir .. "*.lua", false, true)
-	for _, plugin in ipairs(files) do
-		table.insert(t, loadfile(plugin)())
-	end
-
-	return t
-end)()
-
-require("lazy").setup(plugintable, {
+require("lazy").setup({
+	spec = {
+		{ import = "plugins" },
+	},
 	ui = {
 		-- If you are using a Nerd Font: set icons to an empty table which will use the
 		-- default lazy.nvim defined Nerd Font icons, otherwise define a unicode icons table

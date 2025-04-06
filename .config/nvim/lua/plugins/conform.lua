@@ -1,11 +1,12 @@
 local M = { -- Autoformat
 	"stevearc/conform.nvim",
-	lazy = false,
+	event = { "BufWritePre" },
+	cmd = { "ConformInfo" },
 	keys = {
 		{
 			"<leader>f",
 			function()
-				require("conform").format({ async = true, lsp_fallback = true })
+				require("conform").format({ async = true, lsp_format = "fallback" })
 			end,
 			mode = "",
 			desc = "[F]ormat buffer",
@@ -13,27 +14,23 @@ local M = { -- Autoformat
 	},
 	opts = {
 		notify_on_error = false,
-		format_on_save = function(bufnr)
-			-- Disable "format_on_save lsp_fallback" for languages that don't
-			-- have a well standardized coding style. You can add additional
-			-- languages here or re-enable it for the disabled ones.
-			local disable_filetypes = { c = true, cpp = true }
-			return {
-				timeout_ms = 5000,
-				lsp_fallback = not disable_filetypes[vim.bo[bufnr].filetype],
-			}
-		end,
 		formatters_by_ft = {
 			lua = { "stylua" },
 			-- Conform can also run multiple formatters sequentially
-			python = { "isort", "black" },
-			--
-			-- You can use a sub-list to tell conform to run *until* a formatter
-			-- is found.
-			javascript = { "prettierd", "prettier", stop_after_first = true },
+			python = {
+				"ruff_fix", -- ruff check --fix `https://docs.astral.sh/ruff/linter/`
+				"ruff_format", -- ruff format `https://docs.astral.sh/ruff/formatter/`
+			},
+			css = { "prettier" },
+			javascript = { "prettier" },
+			javascriptreact = { "prettier" },
+			markdown = { "prettier" },
+			typescript = { "prettier" },
+			typescriptreact = { "prettier" },
+			yaml = { "prettier" },
+            sh = { "shellcheck" }
 		},
 	},
 }
 
 return M
-
