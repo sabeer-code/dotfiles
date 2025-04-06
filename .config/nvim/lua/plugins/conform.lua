@@ -24,6 +24,7 @@ local M = { -- Autoformat
 			css = { "prettier" },
 			javascript = { "prettier" },
 			javascriptreact = { "prettier" },
+			json = { "jq" },
 			markdown = { "prettier" },
 			typescript = { "prettier" },
 			typescriptreact = { "prettier" },
