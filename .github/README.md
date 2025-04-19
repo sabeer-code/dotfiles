@@ -36,10 +36,10 @@ source ~/.bashrc
 
 ### NeoVim setup
 ```bash
-curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
-sudo rm -rf /opt/nvim
-sudo tar -C /opt -xzf nvim-linux64.tar.gz
-export PATH=$PATH:/opt/nvim-linux64/bin
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
+sudo rm -rf /opt/nvim-linux-x86_64
+sudo tar -C /opt -xzf nvim-linux-x86_64.tar.gz
+export PATH=$PATH:/opt/nvim-linux-x86_64/bin
 ```
 
 ### Tmux setup
