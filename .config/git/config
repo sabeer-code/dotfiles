@@ -1,0 +1,57 @@
+# Local/Private configs
+#
+# See `man git-config` for more information
+# Based on https://blog.gitbutler.com/how-git-core-devs-configure-git/
+[include]
+	path = ~/.config/git/config.local
+
+[alias]
+	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+	dag = log --graph --format='format:%C(yellow)%h%C(reset) %C(blue)%an <%ae>%C(reset) %C(magenta)%cr%C(reset)%C(auto)%d%C(reset)%n%s' --date-order
+
+[branch]
+	sort = -committerdate
+
+[column]
+	ui = auto
+
+[commit]
+	verbose = true
+
+[diff]
+	algorithm = histogram
+	colorMoved = plain
+	mnemonicPrefix = true
+	renames = true
+
+[fetch]
+	prune = true
+	pruneTags = true
+	all = true
+
+[help]
+	autocorrect = prompt
+
+[init]
+	defaultBranch = main
+
+[pull]
+	rebase = true
+
+[push]
+	default = simple
+	autoSetupRemote = true
+	followTags = true
+
+[rebase]
+	autoSquash = true
+	autoStash = true
+	updateRefs = true
+
+[rerere]
+	enabled = true
+	autoupdate = true
+
+[tag]
+	sort = version:refname
+
