@@ -177,7 +177,9 @@ local M = { -- LSP Configuration & Plugins
 					hoverProvider = false,
 				},
 			},
+			jsonls = {}, -- json LSP (for json-schema)
 			ts_ls = {}, -- typescript, javascript
+			tailwindcss = {}, -- tailwindcss
 			lua_ls = { -- lua
 				settings = {
 					Lua = {

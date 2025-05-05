@@ -14,6 +14,16 @@ local M = { -- Autoformat
 	},
 	opts = {
 		notify_on_error = false,
+		formatters = {
+			prettier = {
+				inherit = true,
+				append_args = { "--tab-width", "4", "--config-precedence", "prefer-file" },
+			},
+			jq = {
+				inherit = true,
+				append_args = { "--indent", "4" },
+			},
+		},
 		formatters_by_ft = {
 			lua = { "stylua" },
 			-- Conform can also run multiple formatters sequentially
@@ -22,6 +32,7 @@ local M = { -- Autoformat
 				"ruff_format", -- ruff format `https://docs.astral.sh/ruff/formatter/`
 			},
 			css = { "prettier" },
+			html = { "prettier" },
 			javascript = { "prettier" },
 			javascriptreact = { "prettier" },
 			json = { "jq" },
@@ -29,7 +40,7 @@ local M = { -- Autoformat
 			typescript = { "prettier" },
 			typescriptreact = { "prettier" },
 			yaml = { "prettier" },
-            sh = { "shellcheck" }
+			sh = { "shellcheck" },
 		},
 	},
 }
