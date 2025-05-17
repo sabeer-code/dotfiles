@@ -16,6 +16,12 @@ local M = { -- Collection of various small independent plugins/modules
 		-- - sr)'  - [S]urround [R]eplace [)] [']
 		require("mini.surround").setup()
 
+		-- Align text interactively
+		--
+		-- Examples:
+		-- gA - [G]o [A]lign
+		require("mini.align").setup()
+
 		-- Simple and easy statusline.
 		--  You could remove this setup call if you don't like it,
 		--  and try some other statusline plugin
@@ -36,4 +42,3 @@ local M = { -- Collection of various small independent plugins/modules
 }
 
 return M
-
