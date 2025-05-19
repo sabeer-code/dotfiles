@@ -1,0 +1,26 @@
+[tools]
+# C/C++ Tools
+cmake = "latest"
+ninja = "latest"
+
+# Go Tools
+go = "latest"
+
+# Java Tools
+java = "latest"
+
+# Python Tools
+python = "3.12"
+uv = "latest"
+
+# Javascript/Typescript Tools
+node = "22"
+
+# Rust Tools
+rust = "latest"
+
+# Other CLI Tools
+jq = "latest"
+neovim = "latest"
+ripgrep = "latest"
+

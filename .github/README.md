@@ -1,7 +1,9 @@
 # dotfiles
+
 A repository for some of my configuration dotfiles.
 
 ### How to install onto a new system
+
 ```bash
 alias config="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 echo ".cfg" >> .gitignore
@@ -10,31 +12,10 @@ config checkout
 config config --local status.showUntrackedFiles no
 ```
 
-### Additional files to source folders to add into PATH in ~/.bashrc
-```bash
-cat <<'EOF' >> ~/.bashrc
-
-# Create ~/bin folder if it does not exist and add to PATH
-if [[ ! -d $HOME/bin ]]; then
-    mkdir -p $HOME/bin
-fi
-export PATH="$HOME/bin:$PATH"
-
-# Alias definitions.
-if [[ -f $HOME/.bash_aliases ]]; then
-    . $HOME/.bash_aliases
-fi
-
-# Prompt Definition
-if [[ -f $HOME/.bash_prompt ]]; then
-    . $HOME/.bash_prompt
-fi
-
-EOF
-source ~/.bashrc
-```
-
 ### NeoVim setup
+
+Neovim will be installed as part of `mise install`. Alternatively install manually using:
+
 ```bash
 dir="$(mktemp -d)"
 pushd .
@@ -48,11 +29,12 @@ rm -vrf "${dir}"
 ```
 
 ### Tmux setup
-1. Install Tmux as per [TmuxWiki](https://github.com/tmux/tmux/wiki)  
-**NOTE:** This is needed as some Tmux configuration needs newer versions of Tmux
 
+1. Install Tmux as per [TmuxWiki](https://github.com/tmux/tmux/wiki)
+   **NOTE:** This is needed as some Tmux configuration needs newer versions of Tmux
 
 References:
+
 - [Dotfiles: Best Way to Store in a Bare Git Repository](https://www.atlassian.com/git/tutorials/dotfiles)
 - [0 to LSP : Neovim RC From Scratch by ThePrimeagen](https://youtu.be/w7i4amO_zaE?feature=shared)
 - [Github: lazy.nvim](https://github.com/folke/lazy.nvim)
