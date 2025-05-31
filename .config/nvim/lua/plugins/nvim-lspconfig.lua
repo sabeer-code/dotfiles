@@ -179,6 +179,7 @@ local M = { -- LSP Configuration & Plugins
 			},
 			jsonls = {}, -- json LSP (for json-schema)
 			ts_ls = {}, -- typescript, javascript
+			eslint = {}, -- typescript, javascript
 			tailwindcss = {}, -- tailwindcss
 			lua_ls = { -- lua
 				settings = {
