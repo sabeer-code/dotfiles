@@ -15,6 +15,7 @@ uv = "latest"
 
 # Javascript/Typescript Tools
 node = "22"
+bun = "latest"
 
 # Rust Tools
 rust = "latest"
