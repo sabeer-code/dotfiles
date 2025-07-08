@@ -41,6 +41,7 @@ local M = { -- Autoformat
 			typescriptreact = { "prettier" },
 			yaml = { "prettier" },
 			sh = { "shellcheck" },
+			toml = { "taplo" },
 		},
 	},
 }

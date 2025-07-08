@@ -202,6 +202,7 @@ local M = { -- LSP Configuration & Plugins
 			"prettier", -- HTML/JSX/JavaScript/Markdown/TypeScript/YAML Formatter
 			"shellcheck", -- Shell script formatter
 			"stylua", -- Used to format Lua code
+			"taplo", -- TOML Formatter
 			"yq", -- YAML, JSON, XML, CSV, TOML formatter
 		})
 		require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
