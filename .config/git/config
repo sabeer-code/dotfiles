@@ -42,6 +42,7 @@
 	default = simple
 	autoSetupRemote = true
 	followTags = true
+	recurseSubmodules = on-demand
 
 [rebase]
 	autoSquash = true
@@ -55,3 +56,5 @@
 [tag]
 	sort = version:refname
 
+[submodule]
+	recurse = true
