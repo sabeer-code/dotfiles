@@ -4,4 +4,3 @@ local M = { -- "gc" to comment visual regions/lines
 }
 
 return M
-

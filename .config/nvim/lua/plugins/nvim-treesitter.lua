@@ -30,4 +30,3 @@ local M = { -- Highlight, edit, and navigate code
 }
 
 return M
-

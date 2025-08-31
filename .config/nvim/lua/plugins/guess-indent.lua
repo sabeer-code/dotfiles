@@ -1,6 +1,5 @@
 local M = { -- Detect tabstop and shiftwidth automatically
-	"tpope/vim-sleuth",
+	"NMAC427/guess-indent.nvim",
 }
 
 return M
-
