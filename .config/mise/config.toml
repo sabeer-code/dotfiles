@@ -2,6 +2,7 @@
 # C/C++ Tools
 cmake = "latest"
 ninja = "latest"
+gh = "latest"
 
 # Go Tools
 go = "latest"
@@ -24,4 +25,7 @@ rust = "latest"
 jq = "latest"
 neovim = "latest"
 ripgrep = "latest"
+
+[settings]
+idiomatic_version_file_enable_tools = ["python"]
 
