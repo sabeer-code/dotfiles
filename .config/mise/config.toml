@@ -23,9 +23,12 @@ rust = "latest"
 
 # Other CLI Tools
 jq = "latest"
-neovim = "latest"
 ripgrep = "latest"
+
+[tools."github:neovim/neovim"]
+version = "nightly"
+asset_pattern = "nvim-linux-x86_64.tar.gz"
+
 
 [settings]
 idiomatic_version_file_enable_tools = ["python"]
-
