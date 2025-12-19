@@ -1,4 +1,4 @@
-local M = { -- Colorscheme settings
+return { -- Colorscheme settings
 	"catppuccin/nvim",
 	name = "catppuccin",
 	priority = 1000, -- Make sure to load this before all the other start plugins.
@@ -6,5 +6,3 @@ local M = { -- Colorscheme settings
 		vim.cmd.colorscheme("catppuccin-frappe")
 	end,
 }
-
-return M

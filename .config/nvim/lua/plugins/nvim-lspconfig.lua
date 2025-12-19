@@ -1,4 +1,4 @@
-local M = {
+return {
 	-- Main LSP Configuration
 	"neovim/nvim-lspconfig",
 	dependencies = {
@@ -240,5 +240,3 @@ local M = {
 		})
 	end,
 }
-
-return M

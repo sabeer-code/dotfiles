@@ -1,4 +1,4 @@
-local M = { -- Autocompletion
+return { -- Autocompletion
 	"saghen/blink.cmp",
 	event = "VimEnter",
 	version = "1.*",
@@ -96,5 +96,3 @@ local M = { -- Autocompletion
 		signature = { enabled = true },
 	},
 }
-
-return M

@@ -1,4 +1,4 @@
-local M = { -- Fuzzy Finder (files, lsp, etc)
+return { -- Fuzzy Finder (files, lsp, etc)
 	"nvim-telescope/telescope.nvim",
 	event = "VimEnter",
 	branch = "master",
@@ -87,5 +87,3 @@ local M = { -- Fuzzy Finder (files, lsp, etc)
 		end, { desc = "[S]earch [N]eovim files" })
 	end,
 }
-
-return M

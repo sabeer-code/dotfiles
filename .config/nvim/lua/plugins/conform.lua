@@ -1,4 +1,4 @@
-local M = { -- Autoformat
+return { -- Autoformat
 	"stevearc/conform.nvim",
 	event = { "BufWritePre" },
 	cmd = { "ConformInfo" },
@@ -45,5 +45,3 @@ local M = { -- Autoformat
 		},
 	},
 }
-
-return M
