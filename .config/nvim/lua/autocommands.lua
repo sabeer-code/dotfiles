@@ -11,3 +11,30 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 		vim.hl.on_yank()
 	end,
 })
+
+-- Start Treesitter highlighting
+--  See `:help vim.treesitter.start()`
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = {
+		"bash",
+		"c",
+		"css",
+		"go",
+		"html",
+		"java",
+		"javascript",
+		"jsdoc",
+		"json",
+		"python",
+		"regex",
+		"ruby",
+		"rust",
+		"scala",
+		"tsx",
+		"typescript",
+	},
+	callback = function()
+		-- syntax highlighting, provided by Neovim
+		vim.treesitter.start()
+	end,
+})
