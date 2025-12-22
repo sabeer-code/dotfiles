@@ -22,18 +22,18 @@ vim.o.showmode = false
 vim.o.clipboard = "unnamedplus"
 -- WSL Clipboard
 if vim.fn.has("wsl") then
-	vim.g.clipboard = {
-		name = "WslClipboard",
-		copy = {
-			["+"] = "/mnt/c/Windows/System32/clip.exe",
-			["*"] = "/mnt/c/Windows/System32/clip.exe",
-		},
-		paste = {
-			["+"] = '/mnt/c/Windows/System32/WindowsPowerShell/v1.0/powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
-			["*"] = '/mnt/c/Windows/System32/WindowsPowerShell/v1.0/powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
-		},
-		cache_enabled = 0,
-	}
+  vim.g.clipboard = {
+    name = "WslClipboard",
+    copy = {
+      ["+"] = "/mnt/c/Windows/System32/clip.exe",
+      ["*"] = "/mnt/c/Windows/System32/clip.exe",
+    },
+    paste = {
+      ["+"] = '/mnt/c/Windows/System32/WindowsPowerShell/v1.0/powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+      ["*"] = '/mnt/c/Windows/System32/WindowsPowerShell/v1.0/powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r", ""))',
+    },
+    cache_enabled = 0,
+  }
 end
 
 -- Indent Options
