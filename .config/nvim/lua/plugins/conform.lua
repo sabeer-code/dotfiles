@@ -1,5 +1,20 @@
 return { -- Autoformat
 	"stevearc/conform.nvim",
+	dependencies = {
+		{
+			"WhoIsSethDaniel/mason-tool-installer.nvim",
+			opts = {
+				ensure_installed = {
+					"jq", -- https://mason-registry.dev/registry/list#jq
+					"prettier", -- https://mason-registry.dev/registry/list#prettier
+					"shellcheck", -- https://mason-registry.dev/registry/list#shellcheck
+					"stylua", -- https://mason-registry.dev/registry/list#stylua
+					"taplo", -- https://mason-registry.dev/registry/list#taplo
+					"ruff", -- https://mason-registry.dev/registry/list#ruff
+				},
+			},
+		},
+	},
 	event = { "BufWritePre" },
 	cmd = { "ConformInfo" },
 	keys = {
@@ -44,4 +59,8 @@ return { -- Autoformat
 			toml = { "taplo" },
 		},
 	},
+	init = function()
+		-- If you want the formatexpr, here is the place to set it
+		vim.o.formatexpr = "v:lua.require'conform'.formatexpr()"
+	end,
 }
