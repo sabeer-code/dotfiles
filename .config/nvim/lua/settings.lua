@@ -8,7 +8,7 @@ vim.o.number = true
 vim.o.relativenumber = true
 
 -- Add ruler
-vim.o.colorcolumn = "120"
+vim.o.colorcolumn = "80,120"
 
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.o.mouse = "a"
@@ -39,9 +39,9 @@ end
 -- Indent Options
 -- Enable break indent
 vim.o.breakindent = true
-vim.o.tabstop = 4
-vim.o.softtabstop = 4
-vim.o.shiftwidth = 4
+vim.o.tabstop = 2
+vim.o.softtabstop = 2
+vim.o.shiftwidth = 2
 vim.o.expandtab = true
 vim.o.smartindent = true
 
