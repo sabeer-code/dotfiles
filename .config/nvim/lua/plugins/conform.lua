@@ -32,11 +32,11 @@ return { -- Autoformat
     formatters = {
       prettier = {
         inherit = true,
-        append_args = { "--tab-width", "4", "--config-precedence", "prefer-file" },
+        append_args = { "--tab-width", "2", "--config-precedence", "prefer-file" },
       },
       jq = {
         inherit = true,
-        append_args = { "--indent", "4" },
+        append_args = { "--indent", "2" },
       },
       stylua = {
         inherit = true,
