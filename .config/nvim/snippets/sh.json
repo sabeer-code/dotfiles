@@ -1,0 +1,18 @@
+{
+  "doc_function": {
+    "prefix": "doc_function",
+    "body": [
+      "########################################",
+      "# Description here...",
+      "# Globals:",
+      "#   None",
+      "# Arguments:",
+      "#   None",
+      "# Outputs:",
+      "#   None",
+      "# Returns:",
+      "#   None",
+      "########################################"
+    ]
+  }
+}
