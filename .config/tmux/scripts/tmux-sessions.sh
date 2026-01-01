@@ -102,8 +102,8 @@ function main() {
 
   check_deps
 
-  target_dir=$(select_dir)
-  session_name=$(sanitize_session_name "${target_dir}")
+  target_dir=$(select_dir) || exit 1
+  session_name=$(sanitize_session_name "${target_dir}") || exit 1
 
   # Create a session if it does not exist
   if ! tmux has-session -t "${session_name}" &> /dev/null; then
