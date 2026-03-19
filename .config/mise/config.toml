@@ -2,7 +2,6 @@
 # C/C++ Tools
 cmake = "latest"
 ninja = "latest"
-gh = "latest"
 
 # Go Tools
 go = "latest"
@@ -11,24 +10,32 @@ go = "latest"
 java = "latest"
 
 # Python Tools
-python = "3.12"
+python = ["latest", "3.14"]
+ruff = "latest"
+ty = "latest"
 uv = "latest"
 
 # Javascript/Typescript Tools
-node = "22"
+"npm:typescript" = "latest"
 bun = "latest"
+node = "22"
 
 # Rust Tools
 rust = "latest"
 
 # Other CLI Tools
-jq = "latest"
+fd = "latest"
+gh = "latest"
+neovim = "nightly"
 ripgrep = "latest"
+tree-sitter = "latest"
 
-[tools."github:neovim/neovim"]
-version = "nightly"
-asset_pattern = "nvim-linux-x86_64.tar.gz"
-
-
-[settings]
-idiomatic_version_file_enable_tools = ["python"]
+# LSP Servers & Formatters
+"npm:prettier" = "latest"
+"npm:pyright" = "latest"
+"npm:typescript-language-server" = "latest"
+jq = "latest"
+lua-language-server = "latest"
+shellcheck = "latest"
+stylua = "latest"
+taplo = "latest"
