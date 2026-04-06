@@ -30,10 +30,12 @@ shopt -s histappend     # Append to the history file, don't overwrite it
 
 # Bash Run Configurations
 if [ -d "$HOME/.bashrc.d" ]; then
-    for file in $(find $HOME/.bashrc.d/ -type f | sort); do
+    for file in $(find -L $HOME/.bashrc.d/ -type f | sort); do
         if [ -f "$file" ]; then
             . "$file"
         fi
     done
 fi
 
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)"

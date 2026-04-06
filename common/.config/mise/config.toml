@@ -7,7 +7,7 @@ ninja = "latest"
 go = "latest"
 
 # Java Tools
-java = "latest"
+java = ["latest", "21", "17"]
 
 # Python Tools
 python = ["latest", "3.14"]
