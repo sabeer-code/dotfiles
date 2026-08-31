@@ -26,7 +26,7 @@ rust = "latest"
 # Other CLI Tools
 fd = "latest"
 gh = "latest"
-neovim = "nightly"
+neovim = "0.12"
 ripgrep = "latest"
 tree-sitter = "latest"
 
